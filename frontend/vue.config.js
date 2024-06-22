@@ -16,5 +16,19 @@ module.exports = defineConfig({
         '__VUE_PROD_HYDRATION_MISMATCH_DETAILS__': JSON.stringify(false)
       })
     ]
+  },
+  publicPath: './',
+  outputDir: 'dist',
+  assetsDir: 'assets',
+  productionSourceMap: false,
+  devServer: {
+    proxy: 'http://localhost:8080'
+  },
+  configureWebpack: {
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
+      }
+    }
   }
 });
