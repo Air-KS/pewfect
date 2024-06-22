@@ -62,7 +62,7 @@ export default {
 
 .footer-banner {
 	width: 100%;
-	background: #000000; /* Couleur de la banderole */
+	background: #000000; /* Couleur de la banderol */
 	color: var(--color-background);
 	padding: 30px 0;
 	position: absolute;
