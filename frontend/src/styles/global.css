@@ -2,7 +2,7 @@
   ./frontend/src/styles/global.css
 */
 
-/* Importer la police Oswald depuis Google Fonts */
+/* Importer la police Oswald depuis Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
 
 :root {
