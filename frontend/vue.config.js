@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false,
-  publicPath: '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/dist/' : '/',
   outputDir: 'dist',
   assetsDir: 'assets',
   productionSourceMap: false,
