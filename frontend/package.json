@@ -65,9 +65,6 @@
 	  "not dead",
 	  "not ie 11"
 	],
-	"_id": "frontend@1.0.0",
-	"license": "MIT",
-	"readme": "ERROR: No README data found!",
 	"resolutions": {
 	  "postcss": "^8.4.31"
 	},
