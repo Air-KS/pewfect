@@ -1,0 +1,63 @@
+package utilisé avec yarn
+
+yarn install : Cette commande installe toutes les dépendances listées dans le fichier package.json et génère un fichier yarn.lock si nécessaire.
+
+yarn init : Cette commande crée un nouveau fichier package.json en te posant une série de questions pour configurer ton projet.
+
+yarn add : Cette commande ajoute une dépendance à ton projet et met à jour le fichier package.json ainsi que le fichier yarn.lock.
+
+yarn upgrade : Cette commande met à jour toutes les dépendances vers leurs dernières versions respectant les contraintes du fichier package.json.
+
+yarn audit : Cette commande vérifie les vulnérabilités de sécurité dans les dépendances de ton projet.
+
+yarn version : Cette commande affiche la version actuelle de Yarn installée sur ton système. Elle peut aussi être utilisée pour gérer la version de ton projet.
+
+yarn help : Pour obtenir une liste des commandes disponibles et une brève description de chaque commande
+
+yarn help commande : Pour obtenir une description detailler de la commande
+
+Migration sequelize pour les tables de la base de donnée
+yarn sequelize-cli db:migrate
+yarn sequelize-cli db:seed:all
+
+Lancer le server une fois tout installer
+node server.js
+
+MySQL
+sudo service mysql start
+sudo service mysql stop
+sudo service mysql restart
+sudo service mysql status
+mysql -u root -p
+
+Problème liée au permissions
+sudo chown -R mysql:mysql /var/run/mysqld
+sudo chmod -R 755 /var/run/mysqld
+
+Si mysql -u root -p ne fonctionne pas utilise la commande sudo mysql -u root -p et entre dans mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new_password';
+FLUSH PRIVILEGES;
+
+=== Dans la base de donnée ===
+DROP DATABASE PetGroomingDB;
+CREATE DATABASE PetGroomingDB;
+use PetGroomingDB
+select * from Register;
+DESCRIBE Register;
+DELETE FROM Register WHERE id = 1;
+DELETE FROM Register WHERE email = 'email@gmail.com';
+show tables;
+
+
+
+Comment ça fonctionne à artire de rien
+
+On créer la base de donnée
+CREATE DATABASE PetGroomingDB;
+
+Exécute les migrations pour créer les tables
+yarn sequelize-cli db:migrate
+
+Exécute les seeders dans l'ordre spécifié :
+yarn sequelize-cli db:seed --seed 20240615-default-role => Pour créer les roles par défaut (Client, responsable et Admin)
+yarn sequelize-cli db:seed --seed 20240616-insert-admin.js => Mettre en place les Admin
