@@ -57,9 +57,6 @@ export default {
       searchQuery: "", // Requête de recherche
     };
   },
-  mounted() {
-    document.title = "Pewfect - Dashboard";
-  },
   // Récupère les utilisateurs et initialise le rôle
   async mounted() {
     await this.refreshUsers();
