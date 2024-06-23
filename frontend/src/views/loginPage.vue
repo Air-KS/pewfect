@@ -56,6 +56,9 @@ export default {
       errorMessage: "",
     };
   },
+  mounted() {
+    document.title = "Pewfect - Login";
+  },
   methods: {
     async login() {
       try {

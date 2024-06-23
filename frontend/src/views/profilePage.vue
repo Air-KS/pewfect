@@ -136,6 +136,9 @@ export default {
   created() {
     this.fetchUserProfile();
   },
+  mounted() {
+    document.title = "Pewfect - Profile";
+  },
   methods: {
     async fetchUserProfile() {
       const userId = this.$route.params.id;

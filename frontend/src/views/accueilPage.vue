@@ -15,7 +15,10 @@
 
 export default {
   name: "AccueilPage",
-  
+
+  mounted() {
+    document.title = "Pewfect - Home";
+  },
 };
 </script>
 
