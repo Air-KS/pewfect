@@ -17,11 +17,11 @@ import { authGuard } from '@/middleware/auth.js';
 
 // Définir les routes de l'application
 const routes = [
-  { path: '/', name: 'Accueil', component: accueilPage },
-  { path: '/login', name: 'Login', component: loginPage },
-  { path: '/register', name: 'Register', component: registerPage },
-  { path: '/admin', name: 'Admin', component: adminPage, meta: { requiresAuth: true, roles: ['admin', 'responsable'] } },
-  { path: '/profile/:id', name: 'Profile', component: profilePage, meta: { requiresAuth: true } }
+  { path: '/', name: 'Accueil', component: accueilPage, meta: { title: 'Pewfect - home'} },
+  { path: '/login', name: 'Login', component: loginPage, meta: { title: 'Pewfect - Login'} },
+  { path: '/register', name: 'Register', component: registerPage, meta: { title: 'Pewfect - Register'} },
+  { path: '/admin', name: 'Admin', component: adminPage, meta: { title: 'Pewfect - Dashboard', requiresAuth: true, roles: ['admin', 'responsable'] } },
+  { path: '/profile/:id', name: 'Profile', component: profilePage, meta: { title: 'Pewfect - Profile', requiresAuth: true } }
 ];
 
 // Créer le routeur
