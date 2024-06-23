@@ -63,7 +63,9 @@ export default {
 			errorMessage: '',
 		};
 	},
-
+	mounted() {
+		document.title = 'Pewfect - Register';
+	},
 	methods: {
 		// Méthode pour gérer l'inscription de l'utilisateur
 		async register() {
